@@ -3,7 +3,9 @@ const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 
-const sendEmail = ((recipients, subject, body) => {
+const sendEmail = (subject, body) => {
+
+    const recipients = ['duane@surfrockvideo.com', 'dstanford@beverage-digest.com', 'lstanford@beverage-digest.com']
 
     recipients.forEach((recipient) => {
         sgMail.send({
@@ -14,11 +16,8 @@ const sendEmail = ((recipients, subject, body) => {
         })
     })
 
+    return ("Success!")
 
-
-
-})
-
-module.exports = {
-    sendEmail
 }
+
+module.exports = { sendEmail }

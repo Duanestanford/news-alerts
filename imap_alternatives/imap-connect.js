@@ -2,7 +2,7 @@ var Imap = require('imap'),
     inspect = require('util').inspect;
  
 var imap = new Imap({
-  user: 'send@bd-mail-forwarding.com',
+  user: 'send',
   password: process.env.MAIL_PASSWORD,
   host: 'giowm1172.siteground.biz',
   port: 993,
