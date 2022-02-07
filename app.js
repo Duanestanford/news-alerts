@@ -14,8 +14,9 @@ var config = {
     }
 };
 
-imaps.connect(config).then((connection) => {
-    return connection.openBox('INBOX').then(() => {
+imaps.connect(config)
+.then((connection) => { return connection.openBox('INBOX')
+.then(() => {
 
         var searchCriteria = ['UNSEEN'];
 
@@ -24,19 +25,18 @@ imaps.connect(config).then((connection) => {
             markSeen: false
         };
         
-    connection.search(searchCriteria, fetchOptions).then((messages) => {
-        messages.forEach((message) => {
+return connection.search(searchCriteria, fetchOptions)
+.then((messages) => { messages.forEach((message) => {
                 var all = _.find(message.parts, { "which": "" })
                 var id = message.attributes.uid;
                 var idHeader = "Imap-Id: "+id+"\r\n";
-                // simpleParser(idHeader+all.body, (err, mail) => {
-                //     const subject = mail.subject
-                //     const body = mail.text
-                //     sendEmail(subject, body)
-                console.log(idHeader);
-                // });
+                simpleParser(idHeader+all.body, (err, mail) => {
+                    // access to the whole mail object
+                    const subject = mail.subject
+                    const body = mail.text
+                    sendEmail(subject, body)
+                });
             });
         });
     });
 });
-

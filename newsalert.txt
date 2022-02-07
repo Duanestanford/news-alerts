@@ -1,0 +1,33 @@
+Hi Mom and Dad,
+
+This is one of my news alert solutions. I sent this with sendgrid, an API used for email automation.
+
+My other solution is Mailchimp.
+
+
+Pros of Sendgrid:
+
+- Looks exactly like an outlook mail merge
+- Extremely unlikely to land in a spam filter -- about as unlikley as using mail merge
+- No "unsubscribe" button requirement like Mailchimp
+- More manual control over the underlying technology, so more possible flexibility
+- It's ready to go for the next news alert
+
+
+Pros of Mailchimp:
+
+- Almost no manual work, compared to Sendgrid
+- Much more powerful with a lot of pre-built automation options
+- Easier and more robust linkage to EPUB. Dad could fire off a news alert with no other work at all, from anybody
+
+
+Cons of Mailchip:
+
+- Risk of spam filter
+- It requires, by law, to have an "unsubscribe" link, which could be kind of bad if a subscriber clicks it.
+
+
+
+Food for thought! Let's solve this problem ASAP...
+
+-- Tripp

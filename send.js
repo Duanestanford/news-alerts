@@ -5,7 +5,8 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendEmail = (subject, body) => {
 
-    const recipients = ['duane@surfrockvideo.com', 'dstanford@beverage-digest.com', 'lstanford@beverage-digest.com']
+    const recipients = ['duane@surfrockvideo.com', 'dstanford@beverage-digest.com', 'lstanford@beverage-digest.com', 'tstanford@beverage-digest.com']
+    // const recipients = ['duane@surfrockvideo.com','tstanford@beverage-digest.com']
 
     recipients.forEach((recipient) => {
         sgMail.send({
